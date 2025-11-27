@@ -1,0 +1,75 @@
+{
+  "topRibbon": {
+    "enabled": true,
+    "message": "🎉 Frete Grátis para todo Brasil em compras acima de R$ 150",
+    "closeable": true
+  },
+  "hero": {
+    "title": "Camisetas que Combinam Estilo e Qualidade",
+    "subtitle": "Descubra nossa coleção exclusiva de camisetas premium. Design único, tecidos de alta qualidade e entrega rápida.",
+    "ctaPrimary": "Ver Camisas",
+    "ctaSecondary": "Saber Mais",
+    "image": "/images/camisapreta.jpg",
+    "stats": [
+      { "number": "1000+", "label": "Clientes Satisfeitos" },
+      { "number": "4.9", "label": "Avaliação Média" },
+      { "number": "48h", "label": "Entrega Rápida" }
+    ]
+  },
+  "features": {
+    "title": "Por Que Escolher a Percirelli?",
+    "subtitle": "Nossos diferenciais fazem toda a diferença",
+    "items": [
+      {
+        "icon": "FiShield",
+        "title": "Qualidade Premium",
+        "description": "Tecidos selecionados e acabamento impecável em cada peça"
+      },
+      {
+        "icon": "FiTruck",
+        "title": "Entrega Rápida",
+        "description": "Receba sua camiseta em até 48h em todo o Brasil"
+      },
+      {
+        "icon": "FiLock",
+        "title": "Compra Segura",
+        "description": "Pagamento 100% seguro e dados protegidos"
+      },
+      {
+        "icon": "FiStar",
+        "title": "Design Exclusivo",
+        "description": "Estampas únicas e designs que você não encontra em outro lugar"
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "O Que Nossos Clientes Dizem",
+    "items": [
+      {
+        "name": "João Silva",
+        "role": "Cliente desde 2024",
+        "rating": 5,
+        "text": "Melhor camiseta que já comprei! Qualidade excelente e entrega super rápida. Recomendo!"
+      },
+      {
+        "name": "Maria Santos",
+        "role": "Cliente desde 2024",
+        "rating": 5,
+        "text": "Design incrível e tecido muito confortável. Já comprei várias e todas são perfeitas!"
+      },
+      {
+        "name": "Pedro Costa",
+        "role": "Cliente desde 2024",
+        "rating": 5,
+        "text": "Atendimento impecável e produtos de altíssima qualidade. Superou minhas expectativas!"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Pronto para Encontrar Sua Camiseta Perfeita?",
+    "subtitle": "Explore nossa coleção e descubra designs exclusivos com qualidade premium",
+    "button": "Ver Todas as Camisas",
+    "secondaryText": "Frete grátis acima de R$ 150 • Entrega em até 48h"
+  }
+}
+

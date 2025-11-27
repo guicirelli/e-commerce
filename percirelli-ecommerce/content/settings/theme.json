@@ -1,0 +1,22 @@
+{
+  "colors": {
+    "brand": "#000000",
+    "brandDark": "#1a1a1a",
+    "background": "#ffffff",
+    "darkBackground": "#0f0f0f",
+    "text": "#111111",
+    "textDark": "#eeeeee"
+  },
+  "header": {
+    "sticky": true,
+    "transparent": false,
+    "logoAlign": "left",
+    "showThemeToggle": true
+  },
+  "footer": {
+    "showSocial": true,
+    "showNewsletter": false,
+    "copyright": "© 2025 Percirelli Store. Todos os direitos reservados."
+  }
+}
+
