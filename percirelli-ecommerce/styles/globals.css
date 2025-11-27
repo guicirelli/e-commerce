@@ -1,0 +1,160 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter Variable", sans-serif;
+}
+
+@layer components {
+  .btn {
+    @apply px-6 py-3 rounded-lg font-semibold transition-all duration-200;
+  }
+  
+  .btn-primary {
+    @apply bg-black text-white hover:opacity-90 hover:scale-105;
+  }
+  
+  .btn-outline {
+    @apply border-2 border-current hover:bg-black hover:text-white;
+  }
+  
+  .prose {
+    @apply text-base leading-relaxed;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Oswald', sans-serif;
+  color: #111;
+}
+
+button {
+  background-color: black;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #374151;
+}
+
+/* Minimalist card component */
+.card {
+  background-color: white;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  height: 16rem;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 1rem;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.card-text {
+  color: #4b5563;
+}
+
+/* Accessibility improvements */
+.text-lg {
+  font-size: 1.125rem;
+  color: #1f2937;
+}
+
+@media (min-width: 768px) {
+  .text-lg {
+    font-size: 1.25rem;
+  }
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+  color: #111827;
+}
+
+@media (min-width: 768px) {
+  .text-3xl {
+    font-size: 2.25rem;
+  }
+}
+
+/* Interactive elements */
+button:hover {
+  background-color: #374151;
+}
+
+/* Hierarchy differentiation */
+.subtitle {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #374151;
+}
+
+/* Color blindness considerations */
+.alert-success {
+  background-color: #10b981;
+  color: white;
+}
+
+.alert-error {
+  background-color: #ef4444;
+  color: white;
+}
+
+/* Use icons with color */
+.icon-success {
+  color: #10b981;
+}
+
+.icon-error {
+  color: #ef4444;
+}
+
+/* Responsive adjustments */
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* Example of responsive grid */
+.grid-cols-1 {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .grid-cols-1 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid-cols-1 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
