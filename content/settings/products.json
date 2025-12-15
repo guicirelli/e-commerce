@@ -1,87 +1,86 @@
 [
   {
     "id": 1,
-    "name": "Essential Black - Camiseta Oversized Premium",
-    "price": "R$ 79,90",
+    "name": "Essential Black - Premium Oversized T-Shirt",
+    "price": "R$ 89,90",
     "image": "/images/camisapreta.jpg",
     "description": "Camiseta oversized preta com tecido de alta qualidade e caimento perfeito"
   },
   {
     "id": 2,
-    "name": "Classic White - Camiseta Básica Premium",
+    "name": "Classic White - Premium Basic T-Shirt",
     "price": "R$ 79,90",
     "image": "/images/camisabranca.jpg",
     "description": "Camiseta branca minimalista, versátil e essencial para qualquer guarda-roupa"
   },
   {
     "id": 3,
-    "name": "Percirelli Signature Black - Edição Limitada",
-    "price": "R$ 89,90",
+    "name": "Percirelli Signature Black - Limited Edition",
+    "price": "R$ 119,90",
     "image": "/images/camisapercirellipreta.png",
     "description": "Camiseta estampada com design exclusivo Percirelli em preto premium"
   },
   {
     "id": 4,
-    "name": "Percirelli Signature White - Edição Limitada",
-    "price": "R$ 89,90",
+    "name": "Percirelli Signature White - Limited Edition",
+    "price": "R$ 119,90",
     "image": "/images/camisapercirellibranca.png",
     "description": "Camiseta estampada branca com design exclusivo e acabamento impecável"
   },
   {
     "id": 5,
-    "name": "Percirelli Power Red - Edição Limitada",
-    "price": "R$ 89,90",
+    "name": "Percirelli Power Red - Limited Edition",
+    "price": "R$ 109,90",
     "image": "/images/camisapercirellivermelha.png",
     "description": "Camiseta vermelha vibrante com estampa exclusiva que chama atenção"
   },
   {
     "id": 6,
-    "name": "Percirelli Energy Yellow - Edição Limitada",
-    "price": "R$ 89,90",
+    "name": "Percirelli Energy Yellow - Limited Edition",
+    "price": "R$ 109,90",
     "image": "/images/camisapercirelliamarela.png",
     "description": "Camiseta amarela vibrante com design exclusivo que transmite energia"
   },
   {
     "id": 7,
-    "name": "Percirelli Royal Purple - Edição Limitada",
-    "price": "R$ 89,90",
+    "name": "Percirelli Royal Purple - Limited Edition",
+    "price": "R$ 124,90",
     "image": "/images/camisapercirelliroxo.png",
     "description": "Camiseta roxa premium com estampa exclusiva Percirelli"
   },
   {
     "id": 8,
-    "name": "Percirelli Tiger Edition - Edição Especial",
-    "price": "R$ 94,90",
+    "name": "Percirelli Tiger Edition - Special Edition",
+    "price": "R$ 134,90",
     "image": "/images/camisapercirellitigre.png",
     "description": "Camiseta com estampa exclusiva de tigre, design único e impactante"
   },
   {
     "id": 9,
-    "name": "Premium Brown - Camiseta Elegante",
-    "price": "R$ 79,90",
+    "name": "Premium Brown - Elegant T-Shirt",
+    "price": "R$ 94,90",
     "image": "/images/camisamarrom.jpg",
     "description": "Camiseta marrom elegante e sofisticada, perfeita para looks casuais e refinados"
   },
   {
     "id": 10,
-    "name": "Percirelli Dark Print - Edição Limitada",
-    "price": "R$ 89,90",
+    "name": "Percirelli Dark Print - Limited Edition",
+    "price": "R$ 114,90",
     "image": "/images/camisaestampadapreta.png",
     "description": "Camiseta preta com estampa exclusiva e design moderno"
   },
   {
     "id": 11,
-    "name": "Percirelli Academy Character - Edição Colecionador",
-    "price": "R$ 94,90",
+    "name": "Percirelli Academy Character - Collector's Edition",
+    "price": "R$ 139,90",
     "image": "/images/camisapercirelliacademiapersonagem.png",
     "description": "Camiseta com personagem exclusivo da academia Percirelli, edição especial"
   },
   {
     "id": 12,
-    "name": "Percirelli Beast Mode - Edição Especial",
-    "price": "R$ 89,90",
+    "name": "Percirelli Beast Mode - Special Edition",
+    "price": "R$ 129,90",
     "image": "/images/camisamonstro.png",
     "description": "Camiseta com estampa exclusiva, design ousado e único"
   }
 ]
-

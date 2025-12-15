@@ -2,15 +2,14 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { useTheme } from 'next-themes';
-import { FiMenu, FiX, FiMoon, FiSun } from 'react-icons/fi';
+import { useRouter } from 'next/router';
+import { FiMenu, FiX } from 'react-icons/fi';
 import { motion, AnimatePresence } from 'framer-motion';
+import { getTranslation, type Locale } from '../../lib/translations';
 
 // Wrappers para compatibilidade com React 19
 const MenuIcon = FiMenu as React.ComponentType<{ size?: number; className?: string }>;
 const CloseIcon = FiX as React.ComponentType<{ size?: number; className?: string }>;
-const MoonIcon = FiMoon as React.ComponentType<{ size?: number; className?: string }>;
-const SunIcon = FiSun as React.ComponentType<{ size?: number; className?: string }>;
 
 interface HeaderProps {
   brandName: string;
@@ -21,11 +20,12 @@ interface HeaderProps {
 export default function Header({ brandName, brandLogo, showThemeToggle = true }: HeaderProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const { theme, setTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
+  const router = useRouter();
+  const { locale = 'en', asPath } = router;
+  const currentLocale = (locale as Locale) || 'en';
+  const t = (key: string) => getTranslation(currentLocale, key);
 
   useEffect(() => {
-    setMounted(true);
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
@@ -34,10 +34,10 @@ export default function Header({ brandName, brandLogo, showThemeToggle = true }:
   }, []);
 
   const navItems = [
-    { label: 'Início', href: '#hero' },
-    { label: 'Produtos', href: '#produtos' },
-    { label: 'Diferenciais', href: '#diferenciais' },
-    { label: 'Depoimentos', href: '#depoimentos' },
+    { label: t('nav.home'), href: '#hero' },
+    { label: t('nav.products'), href: '#produtos' },
+    { label: t('nav.features'), href: '#diferenciais' },
+    { label: t('nav.testimonials'), href: '#depoimentos' },
   ];
 
   const handleNavClick = (href: string) => {
@@ -50,50 +50,98 @@ export default function Header({ brandName, brandLogo, showThemeToggle = true }:
     setIsMobileMenuOpen(false);
   };
 
-  if (!mounted) return null;
-
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-white dark:bg-gray-900 shadow-md backdrop-blur-sm'
-          : 'bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm'
+          ? 'bg-gray-900 shadow-md backdrop-blur-sm'
+          : 'bg-gray-900/95 backdrop-blur-sm'
       }`}
     >
-      <nav className="max-w-7xl mx-auto px-4 md:px-8">
-        <div className="flex items-center justify-between h-16">
+      <nav className="max-w-[1920px] mx-auto px-3 sm:px-4 md:px-6 lg:px-8 xl:px-12 2xl:px-16">
+        <div className="flex items-center justify-between h-14 sm:h-16 md:h-18 lg:h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2">
-            <span className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white tracking-tight">
-              <span className="text-black dark:text-white">PERCI</span>
-              <span className="text-gray-600 dark:text-gray-300">RELLI</span>
+          <Link href="/" className="flex items-center space-x-1 sm:space-x-2">
+            <span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-white tracking-tight">
+              PERCIRELLI
             </span>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-4 lg:space-x-6 xl:space-x-8">
             {navItems.map((item) => (
               <button
                 key={item.href}
                 onClick={() => handleNavClick(item.href)}
-                className="text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors font-medium"
+                className="text-white hover:text-gray-300 transition-colors font-semibold text-sm md:text-base lg:text-lg"
               >
                 {item.label}
               </button>
             ))}
+            
+            {/* Language Switcher - Centralizado */}
+            <div className="flex items-center space-x-2 lg:space-x-3 ml-4 lg:ml-8">
+              <Link 
+                href={asPath} 
+                locale="en"
+                className={`px-3 py-1.5 md:px-4 md:py-2 lg:px-5 lg:py-2.5 rounded transition-colors font-medium text-sm md:text-base ${
+                  locale === 'en'
+                    ? 'bg-white text-black'
+                    : 'bg-gray-700 text-white hover:bg-gray-600'
+                }`}
+              >
+                EN
+              </Link>
+              <Link 
+                href={asPath} 
+                locale="pt"
+                className={`px-3 py-1.5 md:px-4 md:py-2 lg:px-5 lg:py-2.5 rounded transition-colors font-medium text-sm md:text-base ${
+                  locale === 'pt'
+                    ? 'bg-white text-black'
+                    : 'bg-gray-700 text-white hover:bg-gray-600'
+                }`}
+              >
+                PT
+              </Link>
+            </div>
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile Menu Button and Language Switcher */}
           <div className="md:hidden flex items-center space-x-2">
+            {/* Language Switcher for Mobile */}
+            <div className="flex items-center space-x-1 mr-2">
+              <Link 
+                href={asPath} 
+                locale="en"
+                className={`px-3 py-1 rounded text-sm ${
+                  locale === 'en'
+                    ? 'bg-white text-black'
+                    : 'bg-gray-700 text-white'
+                }`}
+              >
+                EN
+              </Link>
+              <Link 
+                href={asPath} 
+                locale="pt"
+                className={`px-3 py-1 rounded text-sm ${
+                  locale === 'pt'
+                    ? 'bg-white text-black'
+                    : 'bg-gray-700 text-white'
+                }`}
+              >
+                PT
+              </Link>
+            </div>
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+              className="p-2 rounded-lg hover:bg-gray-800 transition-colors"
               aria-label="Toggle menu"
             >
               {isMobileMenuOpen ? (
-                <CloseIcon size={24} className="text-gray-700 dark:text-gray-300" />
+                <CloseIcon size={24} className="text-white" />
               ) : (
-                <MenuIcon size={24} className="text-gray-700 dark:text-gray-300" />
+                <MenuIcon size={24} className="text-white" />
               )}
             </button>
           </div>
@@ -113,7 +161,7 @@ export default function Header({ brandName, brandLogo, showThemeToggle = true }:
                   <button
                     key={item.href}
                     onClick={() => handleNavClick(item.href)}
-                    className="text-left px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors"
+                    className="text-left px-4 py-2 text-white hover:bg-gray-800 rounded-lg transition-colors font-medium"
                   >
                     {item.label}
                   </button>

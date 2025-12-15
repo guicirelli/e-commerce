@@ -30,27 +30,27 @@ export default function TestimonialCard({ name, role, rating, text, index }: Tes
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
-      className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
+      className="bg-white p-4 sm:p-5 md:p-6 lg:p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
     >
-      <div className="flex items-center mb-4">
-        <div className="w-12 h-12 rounded-full bg-black dark:bg-gray-700 flex items-center justify-center text-white font-semibold mr-4">
+      <div className="flex items-center mb-3 sm:mb-4 md:mb-5">
+        <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 rounded-full bg-black flex items-center justify-center text-white font-semibold mr-3 sm:mr-4 text-xs sm:text-sm md:text-base lg:text-lg">
           {getInitials(name)}
         </div>
         <div>
-          <h4 className="font-semibold text-gray-900 dark:text-white">{name}</h4>
-          <p className="text-sm text-gray-600 dark:text-gray-400">{role}</p>
+          <h4 className="font-semibold text-sm sm:text-base md:text-lg lg:text-xl text-gray-900">{name}</h4>
+          <p className="text-xs sm:text-sm md:text-base text-gray-600">{role}</p>
         </div>
       </div>
-      <div className="flex mb-3">
+      <div className="flex mb-2 sm:mb-3">
         {[...Array(5)].map((_, i) => (
           <StarIcon
             key={i}
-            size={16}
-            className={i < rating ? 'text-yellow-400 fill-yellow-400' : 'text-gray-300'}
+            size={14}
+            className={`sm:w-4 sm:h-4 md:w-5 md:h-5 ${i < rating ? 'text-yellow-400 fill-yellow-400' : 'text-gray-300'}`}
           />
         ))}
       </div>
-      <p className="text-gray-700 dark:text-gray-300 italic">"{text}"</p>
+      <p className="text-sm sm:text-base md:text-lg text-gray-700 italic">"{text}"</p>
     </motion.div>
   );
 }

@@ -5,6 +5,10 @@ const nextConfig: NextConfig = {
   /* config options here */
   reactStrictMode: true,
   outputFileTracingRoot: path.resolve(process.cwd()),
+  i18n: {
+    locales: ['en', 'pt'],
+    defaultLocale: 'en',
+  },
   images: {
     domains: [],
     unoptimized: true,

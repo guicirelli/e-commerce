@@ -32,16 +32,16 @@ export default function TopRibbon({ message, closeable = true }: TopRibbonProps)
   if (!isVisible) return null;
 
   return (
-    <div className="bg-black text-white py-2 px-4 relative">
-      <div className="max-w-7xl mx-auto flex items-center justify-center">
-        <p className="text-sm text-center">{message}</p>
+    <div className="bg-black text-white py-2 sm:py-2.5 md:py-3 px-3 sm:px-4 md:px-6 lg:px-8 relative">
+      <div className="max-w-[1920px] mx-auto flex items-center justify-center">
+        <p className="text-xs sm:text-sm md:text-base lg:text-lg text-center px-8 sm:px-10 md:px-12">{message}</p>
         {closeable && (
           <button
             onClick={handleClose}
-            className="absolute right-4 top-1/2 -translate-y-1/2 hover:opacity-70 transition-opacity"
+            className="absolute right-2 sm:right-3 md:right-4 lg:right-6 top-1/2 -translate-y-1/2 hover:opacity-70 transition-opacity"
             aria-label="Fechar"
           >
-            <CloseIcon size={18} />
+            <CloseIcon size={16} className="sm:w-5 sm:h-5 md:w-6 md:h-6" />
           </button>
         )}
       </div>
