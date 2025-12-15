@@ -1,0 +1,18 @@
+{
+  "title": "Percirelli E-commerce",
+  "home": "Home",
+  "cart": "Cart",
+  "checkout": "Checkout",
+  "highlights": "Highlights",
+  "product": {
+    "oversizedShirt": "Oversized Shirt",
+    "basicTshirt": "Basic T-Shirt",
+    "printedHoodie": "Printed Hoodie"
+  },
+  "price": "Price",
+  "quantity": "Quantity",
+  "addToCart": "Add to Cart",
+  "total": "Total",
+  "emptyCart": "Your cart is empty.",
+  "checkoutMessage": "Order successfully placed!"
+}

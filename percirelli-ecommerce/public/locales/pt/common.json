@@ -1,0 +1,18 @@
+{
+  "title": "Percirelli E-commerce",
+  "home": "Início",
+  "cart": "Carrinho",
+  "checkout": "Finalizar Compra",
+  "highlights": "Destaques",
+  "product": {
+    "oversizedShirt": "Camisa Oversized",
+    "basicTshirt": "Camiseta Básica",
+    "printedHoodie": "Moletom Estampado"
+  },
+  "price": "Preço",
+  "quantity": "Quantidade",
+  "addToCart": "Adicionar ao Carrinho",
+  "total": "Total",
+  "emptyCart": "Seu carrinho está vazio.",
+  "checkoutMessage": "Pedido realizado com sucesso!"
+}
